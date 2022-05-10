@@ -1,0 +1,13 @@
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\bin\Debug\ProyectoCarpeta.exe.config
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\bin\Debug\ProyectoCarpeta.exe
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\bin\Debug\ProyectoCarpeta.pdb
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\obj\Debug\ProyectoCarpeta.csproj.AssemblyReference.cache
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\obj\Debug\ProyectoCarpeta.Properties.Resources.resources
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\obj\Debug\ProyectoCarpeta.csproj.GenerateResource.cache
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\obj\Debug\ProyectoCarpeta.csproj.CoreCompileInputs.cache
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\obj\Debug\ProyectoCarpeta.exe
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\obj\Debug\ProyectoCarpeta.pdb
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\obj\Debug\ProyectoCarpeta.Inicio.resources
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jairo\OneDrive\Escritorio\Genpact\ProyectoCarpeta\ProyectoCarpeta\obj\Debug\ProyectoCarpeta.csproj.CopyComplete
