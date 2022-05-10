@@ -19,8 +19,8 @@ namespace ProyectoCarpeta
     {
         
         private System.Timers.Timer aTimer;
-        RutaController ruta = new RutaController();
-        private bool ruote = false;
+        
+       
         public Inicio()
         {
             
@@ -59,8 +59,13 @@ namespace ProyectoCarpeta
         }
         private void path() 
         {
+            bool ruote = false;
+            bool exel = false;
+            bool otros = false;
+            RutaController ruta = new RutaController();
             RutaController rc = new RutaController();
             ruote = ruta.rutaPrincipal();
+            //verifica la ruta
             if (!ruote)
             {
                 string rutaDefinida = "";
@@ -74,6 +79,17 @@ namespace ProyectoCarpeta
                 rc.CrearRuta(rutaDefinida);
             }
             lblRuta.Text = rc.obtenerRuta();
+
+            ruta.ValidarCarpetas(exel,otros, lblRuta.Text);
+
+            if (!exel) 
+            {
+                rc.CrearCarpetas(lblRuta.Text, "excel");
+            }
+            if (!otros) 
+            {
+                rc.CrearCarpetas(lblRuta.Text, "otros");
+            }
         }
 
         private void btnCambiarRuta_Click(object sender, EventArgs e)

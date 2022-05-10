@@ -13,22 +13,32 @@ namespace ProyectoCarpeta.Controllers
     {
         string path = Directory.GetCurrentDirectory() + "\\ruta.json";
 
+        //valida si exite el archivo
         public bool rutaPrincipal()
         {
 
             bool result = File.Exists(path);
             if (result == true)
             {
-                Console.WriteLine("Existe el archivo");
+            
                 return true;
 
             }
             else
             {
-                Console.WriteLine("File Not Found");
+             
                 return false;
 
             }
+        }
+        //valida si existe carpetas
+        public void ValidarCarpetas(bool excel, bool otros, string ruta) 
+        {
+            bool validaExcel = File.Exists(ruta+"\\excel");
+            bool validaOtros = File.Exists(ruta + "\\otros");
+
+            excel = validaExcel;
+            otros = validaOtros;
         }
         //crea la ruta
         public void CrearRuta(string ruta)
@@ -100,6 +110,11 @@ namespace ProyectoCarpeta.Controllers
                 Console.WriteLine(ex.ToString());
             }
 
+        }
+        //crearCapetas
+        public void CrearCarpetas(string ruta, string carpeta) 
+        {
+       Directory.CreateDirectory(ruta+"\\"+ carpeta);
         }
 
     }
