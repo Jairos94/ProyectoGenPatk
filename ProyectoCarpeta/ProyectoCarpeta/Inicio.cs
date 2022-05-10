@@ -28,6 +28,7 @@ namespace ProyectoCarpeta
             Temporizador();
             path();
         }
+        //temporizador
         private void Temporizador() 
         {
             // Create a timer with a two second interval.
@@ -39,21 +40,21 @@ namespace ProyectoCarpeta
             
         }
 
-        //temporizador
+        //Evento Temporizador
         private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            Console.WriteLine("The Elapsed event was raised at {0:HH:mm:ss.fff}",
-                              e.SignalTime);
+            Console.WriteLine(e.SignalTime.Date); 
+            
         }
+        
 
         private void btnRuta_Click(object sender, EventArgs e)
         {
             using (var fd = new FolderBrowserDialog())
             {
-                if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(fd.SelectedPath))
-                {
-                   lblRuta.Text= fd.SelectedPath;
-                }
+                
+                    System.Diagnostics.Process.Start(lblRuta.Text);
+                
             }
         }
         private void path() 
