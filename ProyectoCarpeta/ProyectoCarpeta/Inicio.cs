@@ -37,17 +37,20 @@ namespace ProyectoCarpeta
             aTimer.Elapsed += OnTimedEvent;// llama al método 
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
+
             
         }
 
         //Evento Temporizador
         private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            Console.WriteLine(e.SignalTime.Date); 
-            
+
+            RutaController rc = new RutaController();
+            rc.consiliarArchivos();
+
         }
         
-
+        //Lo lleva a la ruta
         private void btnRuta_Click(object sender, EventArgs e)
         {
             using (var fd = new FolderBrowserDialog())
@@ -57,6 +60,7 @@ namespace ProyectoCarpeta
                 
             }
         }
+        //valida si existen archivos
         private void path() 
         {
             bool ruote = false;
@@ -92,6 +96,7 @@ namespace ProyectoCarpeta
             }
         }
 
+        //Cambia la ruta 
         private void btnCambiarRuta_Click(object sender, EventArgs e)
         {
             RutaController rc = new RutaController();
