@@ -19,8 +19,8 @@ namespace ProyectoCarpeta
     {
         
         private System.Timers.Timer aTimer;
-        RutaController ruta = new RutaController();
-        private bool ruote = false;
+        
+       
         public Inicio()
         {
             
@@ -28,6 +28,7 @@ namespace ProyectoCarpeta
             Temporizador();
             path();
         }
+        //temporizador
         private void Temporizador() 
         {
             // Create a timer with a two second interval.
@@ -36,30 +37,39 @@ namespace ProyectoCarpeta
             aTimer.Elapsed += OnTimedEvent;// llama al método 
             aTimer.AutoReset = true;
             aTimer.Enabled = true;
+
             
         }
 
-        //temporizador
+        //Evento Temporizador
         private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            Console.WriteLine("The Elapsed event was raised at {0:HH:mm:ss.fff}",
-                              e.SignalTime);
-        }
 
+            RutaController rc = new RutaController();
+            rc.consiliarArchivos();
+
+        }
+        
+        //Lo lleva a la ruta
         private void btnRuta_Click(object sender, EventArgs e)
         {
             using (var fd = new FolderBrowserDialog())
             {
-                if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(fd.SelectedPath))
-                {
-                   lblRuta.Text= fd.SelectedPath;
-                }
+                
+                    System.Diagnostics.Process.Start(lblRuta.Text);
+                
             }
         }
+        //valida si existen archivos
         private void path() 
         {
+            bool ruote = false;
+            bool exel = false;
+            bool otros = false;
+            RutaController ruta = new RutaController();
             RutaController rc = new RutaController();
             ruote = ruta.rutaPrincipal();
+            //verifica la ruta
             if (!ruote)
             {
                 string rutaDefinida = "";
@@ -73,8 +83,20 @@ namespace ProyectoCarpeta
                 rc.CrearRuta(rutaDefinida);
             }
             lblRuta.Text = rc.obtenerRuta();
+
+            ruta.ValidarCarpetas(exel,otros, lblRuta.Text);
+
+            if (!exel) 
+            {
+                rc.CrearCarpetas(lblRuta.Text, "excel");
+            }
+            if (!otros) 
+            {
+                rc.CrearCarpetas(lblRuta.Text, "otros");
+            }
         }
 
+        //Cambia la ruta 
         private void btnCambiarRuta_Click(object sender, EventArgs e)
         {
             RutaController rc = new RutaController();
