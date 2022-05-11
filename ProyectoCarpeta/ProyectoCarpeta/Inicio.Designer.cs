@@ -32,11 +32,11 @@ namespace ProyectoCarpeta
             this.lblProcesos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCambiarRuta = new System.Windows.Forms.Button();
+            this.lblRuta = new System.Windows.Forms.Label();
             this.btnRuta = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvResultados = new System.Windows.Forms.DataGridView();
-            this.lblRuta = new System.Windows.Forms.Label();
-            this.btnCambiarRuta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
@@ -74,6 +74,24 @@ namespace ProyectoCarpeta
             this.panel1.Size = new System.Drawing.Size(800, 81);
             this.panel1.TabIndex = 2;
             // 
+            // btnCambiarRuta
+            // 
+            this.btnCambiarRuta.Location = new System.Drawing.Point(639, 51);
+            this.btnCambiarRuta.Name = "btnCambiarRuta";
+            this.btnCambiarRuta.Size = new System.Drawing.Size(133, 23);
+            this.btnCambiarRuta.TabIndex = 4;
+            this.btnCambiarRuta.Text = "Cambiar Ruta";
+            this.btnCambiarRuta.UseVisualStyleBackColor = true;
+            this.btnCambiarRuta.Click += new System.EventHandler(this.btnCambiarRuta_Click);
+            // 
+            // lblRuta
+            // 
+            this.lblRuta.AutoSize = true;
+            this.lblRuta.Location = new System.Drawing.Point(33, 62);
+            this.lblRuta.Name = "lblRuta";
+            this.lblRuta.Size = new System.Drawing.Size(0, 13);
+            this.lblRuta.TabIndex = 3;
+            // 
             // btnRuta
             // 
             this.btnRuta.Location = new System.Drawing.Point(672, 22);
@@ -102,24 +120,6 @@ namespace ProyectoCarpeta
             this.dgvResultados.Size = new System.Drawing.Size(800, 369);
             this.dgvResultados.TabIndex = 0;
             // 
-            // lblRuta
-            // 
-            this.lblRuta.AutoSize = true;
-            this.lblRuta.Location = new System.Drawing.Point(33, 62);
-            this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(0, 13);
-            this.lblRuta.TabIndex = 3;
-            // 
-            // btnCambiarRuta
-            // 
-            this.btnCambiarRuta.Location = new System.Drawing.Point(639, 51);
-            this.btnCambiarRuta.Name = "btnCambiarRuta";
-            this.btnCambiarRuta.Size = new System.Drawing.Size(133, 23);
-            this.btnCambiarRuta.TabIndex = 4;
-            this.btnCambiarRuta.Text = "Cambiar Ruta";
-            this.btnCambiarRuta.UseVisualStyleBackColor = true;
-            this.btnCambiarRuta.Click += new System.EventHandler(this.btnCambiarRuta_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +127,7 @@ namespace ProyectoCarpeta
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
